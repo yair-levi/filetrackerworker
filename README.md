@@ -1,6 +1,11 @@
 File Tracker Worker Background
 -------------
-This is a part of full solution to detects duplicat files in directory, 
+This is a part of full solution to detects duplicat files in directory
+
+
+https://user-images.githubusercontent.com/71433083/216136984-f8e6b452-bc16-4867-b4fb-c9ecc3f7acc8.mp4
+
+
 This micro-serves consume to messages from changes queue and start his work as following:
 1. start handel removed file and delete the file from DB
 2. handel modified file and record changes in log file (all the handlers record in log)
