@@ -50,18 +50,3 @@ class Worker:
 
     def start(self):
         self.consumer.start_consume(callback=self.worker)
-
-if __name__ == '__main__':
-    files =FileRepository(db_name="\\Users\\Flolive\\PycharmProjects\\fileTracker\\file_tracker")
-    files.create_table_if_not_exists()
-    files.add_file("test1", "d41d8cd98f00b204e9800998ecf8427e")
-    files.close_transaction()
-    # files.add_file("test2", "222222222")
-    # files.close_transaction()
-    a = files.find_by_md5("d41d8cd98f00b204e9800998ecf8427e")
-    print(a)
-    print(a)
-    files.update_md5_by_file_name("test1", "d41d8cd98f00b204e9800998ecf84277")
-    files.close_transaction()
-    files.delete_file_by_name("test1")
-    files.close_transaction()
